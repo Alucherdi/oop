@@ -1,0 +1,31 @@
+clase Carrito {
+  llantas
+  puertas
+  colorPintura
+
+  velocidad
+
+  andar(direccion) {
+    si direccion es norte: velocidad.z = 3
+    sino si direccion es sur: velocidad.z = -3
+
+    si direccion es este: velocidad.x = 3
+    sino si direccion es sur: velocidad.x = -3
+  }
+}
+
+
+clase Terrenator que hereda Carrito {
+  mitades
+
+  sobre_escribe
+  andar(direccion) {
+    padre.andar(direccion)
+    si direccion es voltear: mitades[1].voltear()
+  }
+}
+
+clase Paquete {
+  control
+  carrito
+}
