@@ -1,0 +1,101 @@
+Introducción a los paradigmas:
+
+¿Qué es un paradigma de programación?
+    
+        Con paradigma nos referimos a la forma en la que organizamos y estructuramos la lógica a seguir para resolver un problema a través de código.
+
+        Sirve para que, en un proyecto que pueda tener mucha gente integrando módulos, o simplemente que en un futuro tu mismo vayas a integrar algo, existan estas adiciones sin que tengamos que re descubrir lo ya desarrollado
+
+    *Mencionar over patching*
+
+
+
+La estructura detrás de POO
+
+        Programación orientada a objetos es un paradigma que se enfoca en organizar la lógica de un flujo basandonos en el concepto de Objetos, casi vinculado a la forma de persepción que tenemos de las cosas que nos rodean.
+
+        Cuando nosotros vemos un objeto vemos caracteristicas que lo componen, y estos objetos en su mayoría tienen un proposito específico con el que realizamos alguna acción.
+
+        Así mismo cuando nosotros vemos un objeto en programación vemos un elemento que representa una entidad y dentro de su contexto encontramos atributos, que componen su caracteristicas y métodos, que componen  sus acciones.
+
+Ejemplo principal: Carro a control remoto.
+
+
+Qué define a OOP? 
+    * Abstracción
+            Nosotros muy probablemente sepamos que es y cómo usar un carro a control remoto aunque no sabemos cómo se fabrique, no sabemos cómo funciona por dentro, pero sabemos cómo usarlo. Nosotros tendemos a llamar a la anatomía funcional de esta entidad como abstracción.
+
+    * Encapsulación
+            Qué compone un carrito? Qué describe lo que puedes ver y lo que no pero ocupas al definir y usar un carrito dentro de nuestra definición del mismo? los conceptos que preparamos para describir y adecuar el uso de un elemento "carrito" tienen que venir encapsulados en este mismo elemento, para que cuando nosotros repliquemos este elemento, estos conceptos vengan con el.
+
+            * mencionar modificadores de acceso *
+
+    * Herencia
+            * Ejemplo de terrenator *, cuando usamos de algo muy general, y después queremos algo que tiene esto que es muy general, pero también queremos algo particular, podemos reutilizar estos elementos generales y volverlos padres del elemento que tiene más cosas particulares. En su defecto podemos decir que heredamos estas caracteristicas para que no tengamos que replicarlas y tengamos un mayor control en la modularización de nuestro sistema.
+            
+    * Polimorfísmo
+            Tenemos un control remoto que funciona para dos carritos, para el terrenator y para uno genérico, pero las instrucciones no son las mismas, porque con el terrenator puedo dar giros que con el genérico no puedo, que podría hacer? Sería bueno que siempre tenga una instancia de un Carro general, pero solo si es un terrenator un método se comportase de otra manera, el de andar por ejemplo, lo podría sobreescribir pero que se siga llamando de la misma manera para que independientemente de lo que haga, el andar siempre se llame tal cual, andar.
+
+        La acción general funciona de manera particular pero el molde de la acción es el mismo y puede ser usado según la peculiaridad del objeto.
+
+    * Composición: * Ejemplo de paquete que compone un carro y compone un control *
+
+
+Glosario: 
+    * Clase: El molde de información que usaremos para la reciplicidad de los objetos, cuando hablamos de una clase hablamos del cascaron que encapsula los conceptos que definen un elemento.
+
+    * Instancia: Acción de generación de un elemento en base a una clase
+
+    * Objeto: El resultado de una instancia
+
+    * Atributo: Qué describe a ese elemento?
+
+    * Método: Qué realiza ese elemento?
+
+    * Padre: En temas de herencia, llamamos padre al elemento del que hereda un objeto
+
+
+Ejemplo con carrito a control remoto
+
+    Qué tiene un carrito?
+        * llantas
+        * color de pintura
+        * tamaño
+        * velocidad
+        * energía
+        
+    Qué hace el carrito?
+        * andar
+        * retroceder
+
+
+Reglas en base a estas abstracciones:
+
+    * Los métodos tienen que ser acciones
+    * Los métodos no hacen más de una acción
+    * Los atributos solo pueden ser características del mismo elemento
+    * Los atributos son adjetivos y elementos
+    * Los atributos pueden ser otros objetos (Composición)
+    * Un objeto no puede cambiar los estados de otro objeto
+
+
+
+VENTAJAS: 
+    Comprensión Humana: Cuando hablamos de OOP hablamos de un paradigma que fue creado para facilitar la escritura de código, es generalmente un código más verboso, que trata de incorporar cualquier elemento de nuestro flujo como un objeto y tratarlo a manera de que tengamos una persepción conceptual más realista de las cosas según lo que ocupemos
+    
+    Alcance: Es el segundo paradigma más usado detrás del paradigma imperativo, suponiendo un alcance significativo en los proyectos que puedas encontrar en la industria
+
+DESVENTAJAS:
+    Obligación técnica: Al tener un desarrollo que tiene una estructura estricta, necesitamos representar los objetos independientemente de la complejidad de los mismos * seguimos con el ejemplo de los controles con mil carritos, cambio de estados * 
+
+    Abstracción innecesaria: Parecido al primer punto, la modularidad que nos obliga a hacer OOP hace que tengamos abstracción innecesaria dentro de los métodos que definimos para un elemento
+
+
+Estrategias de patrones adaptados
+    Aparte de las reglas y estructuras que nos provee el paradigma, tenemos varias estrategias que podemos implementar, algunas de ellas son Singleton, Records e interfaces
+
+Singleton: El uso de un elemento que maneja su propia instancia a favor de la persistencia de data a través de todo el sistema
+
+Records: El uso de clases que se dedican únicamente a encapsular información serializable
+
+Interfaces: Descripción a manera de guía para la generación de clases, que no depende de un nivel de herencia si no un nivel de implementación

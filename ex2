@@ -1,0 +1,21 @@
+clase Control {
+    palanca
+    carritos[]
+
+    moverPalanca() {
+        por cada carrito en carritos
+            carrito.andar(palanca.direccion)
+    }
+}
+
+// :(
+
+clase Control {
+    palanca
+
+    moverPalanca() {
+        // mandar la señal de la dirección de palanca?
+    }
+}
+
+// >:(

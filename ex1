@@ -2,6 +2,7 @@ clase Carrito {
   llantas
   puertas
   colorPintura
+  bocinasMamalonas
 
   velocidad
 
@@ -10,19 +11,45 @@ clase Carrito {
     sino si direccion es sur: velocidad.z = -3
 
     si direccion es este: velocidad.x = 3
-    sino si direccion es sur: velocidad.x = -3
+    sino si direccion es oeste: velocidad.x = -3
   }
 }
 
+clase Arma {
+    balas
+    disparador
+
+    disparar() {
+        ...
+    }
+}
 
 clase Terrenator que hereda Carrito {
   mitades
+  alas
+  arma
 
   sobre_escribe
   andar(direccion) {
     padre.andar(direccion)
     si direccion es voltear: mitades[1].voltear()
   }
+
+  volar() {
+  }
+
+  disparar() {
+      arma.disparar()
+  }
+}
+
+clase Control {
+    palanca
+    carrito
+
+    moverPalanca() {
+        carrito.andar(palanca.direccion)
+    }
 }
 
 clase Paquete {
